@@ -55,6 +55,7 @@ public class QuickSort {
         while(true) {
             while(a[++leftPtr] < pivot){} //往上找
             while(rightPtr > 0 && a[--rightPtr] > pivot){} //往下找
+
             if(leftPtr >= rightPtr) break;
             else swap(a,leftPtr, rightPtr);
         }
@@ -72,6 +73,15 @@ public class QuickSort {
         int temp=source[m];
         source[m]=source[n];
         source[n]=temp;
+    }
+
+    public static void main(String[]args){
+        QuickSort qs=new QuickSort();
+        int num[]={1,17,17,17};
+        qs.quickSort(num);
+        for (int i=0;i<num.length;i++){
+            System.out.print(num[i]+" ");
+        }
     }
 }
 
